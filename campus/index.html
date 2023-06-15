@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TIET Campus Tour</title>
+  <!-- tab icon -->
+  <link rel="icon" type="image/png" href="static/icon1.png">
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|gillsans:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="static/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="static/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <script>
+    window.onload = ()=>{
+      const loginModal = new bootstrap.Modal('#loginModal', {
+      keyboard: false
+      })
+      document.getElementById("loginClick").addEventListener('click',()=>{
+      console.log("yes")
+      const modal = document.getElementById("loginModal")
+      if(document.getElementById("loginClick").innerHTML === 'Login / Signup'){
+        loginModal.show(modal)
+      }
+    })
+
+      const login = ()=>{
+        const username = document.getElementById("exampleFormControlInput1").value
+        const password = document.getElementById("exampleFormControlInput2").value
+        if(username==="campustour" && password==="pass"){
+          console.log("login successfull")
+          document.getElementById("loginClick").innerHTML=username
+          loginModal.hide()
+        }
+      }
+      document.getElementById("signupBtn").addEventListener('click',login);
+      document.getElementById("loginBtn").addEventListener('click',login)
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+      
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <!-- <a href="#" class="facebook"><i class="bi bi-facebook"></i></a> -->
+        <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>  -->
+        <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html"><img src="static/logo01.png"></a></h1>
+    
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="#home">Home</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
+          <li><a class="nav-link scrollto" href="#services">Amenities</a></li>
+          
+          <li><a class="nav-link scrollto" href="#doctors">Our Team</a></li>       
+          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <!--<a href="" class="appointment-btn" id="loginClick"><span class="appointment-btn" id="loginClick" class="d-none d-md-inline">Login / Signup</span></a>-->
+      <!-- <span class="appointment-btn" id="loginClick" class="d-none d-md-inline">Login / Signup</span> -->
+      
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Home Section ======= -->
+  <section id="home" class="d-flex align-items-center">
+    <div class="container">
+      <h1>360<sup>&deg;</sup> VIRTUAL TOUR</h1>
+      <br><br><br><br>
+      <h2>"Experience an immersive journey with our self-curated <i>360<sup>&deg;</sup> virtual tour</i>, 
+        <br> designed and developed in-house by our team 
+        <br> Discover the distinctive essence of our institution through their creative lens, 
+        <br> showcasing their ingenuity embark on a captivating exploration"
+        </h2>
+      <!-- <a href="https://storage.net-fs.com/hosting/7884200/2/" class="btn-get-started scrollto">Learn More</a> -->
+      
+      
+    </div>
+  </section><!-- End Home -->
+<br><br><br><br><br><br><br><br>
+  <main id="main">
+    
+    <!-- ======= Featured Services Section ======= -->
+    <!-- <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4 class="title"><a href=""> Normal checkup</a></h4>
+              <p class="description">Checkups are necessary.click here to get your health investigated</p>
+                 <a href="#">Click here to view:</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4 class="title"><a href="">HOSTEL O</a></h4>
+              <p class="description">Checkups are necessary.click here to get your health investigated</p>
+                 <a href="#">Click here to view:</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="fas fa-dna"></i></div>
+              <h4 class="title"><a href="">Lab Test</a></h4>
+              <p class="description">Get confirmed of positive or negative by lab tests</p>
+              <a href="#">Click here to view:</a>
+            </div>
+          </div>
+          
+          <div class="row"></div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="fas fa-dna"></i></div>
+              <h4 class="title"><a href="">CSED</a></h4>
+              <p class="description"></p>
+              <a href="#">Click here to view:</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="fas fa-hand-holding-medical"></i></div>
+              <h4 class="title"><a href="">library</a></h4>
+              <!-- <p class="description">Tell us your symptoms and we will suggest you meds with cures.</p> -->
+              <!-- <a href="#">Click here to view:</a>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <img "health_centre.jpg" alt="">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <!-- <div class="icon"><i class="fas fa-temperature-high"></i></div> -->
+              <!-- <img height="100" width="200  " src="health_centre.jpg" alt="">
+              <h2 class="title"><a href="">Health Centre</a></h2>
+              
+              <a href="#">Click here to view:</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="fas fa-temperature-high"></i></div>
+              <h2 class="title"><a href="">faculty lounge</a></h2>
+              <a href="#">Click here to view:</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+    <!-- ======= About Section ======= -->
+    <!-- <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>A renowned group of doctors, ready 24x7 at your service
+           All of Us have been certified and will always be there at your every medical need
+          </p>
+        </div>
+
+    <div class="row">
+    <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
+     align-items-stretch position-relative">
+    <a href="https://www.youtube.com/watch?v=xIRmD6MwqlE" class="glightbox play-btn mb-4"></a>
+          </div>
+
+    <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
+     justify-content-center py-5 px-lg-5">
+            
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-heart"></i></div>
+              <h4 class="title"><a href="">HEALTH IS WEALTH</a></h4>
+              <p class="description">reasonable charges charged for membership.Health taken as topmost priority</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-health"></i></div>
+              <h4 class="title"><a href="">EMERGENCY</a></h4>
+              <p class="description">24x7 EMERGENCY</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-help-circle"></i></div>
+              <h4 class="title"><a href="">SERVICES </a></h4>
+              <p class="description">World class machines available at your home itself. Medical help,lab tests,specialist appointments;all available at a click</p>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>  -->
+    <!-- End About Section -->
+
+   <!-- ======= Counts Section ======= -->
+   <!-- <section id="counts" class="counts">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row no-gutters">
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="fas fa-user-md"></i>
+            <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Doctors</strong> AVAILABLE AT YOUR SERVICE</p>
+            <a href="#">Find out more &raquo;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="far fa-hospital"></i>
+            <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Departments</strong> AVAILABLE FOR YOU</p>
+            <a href="#">Find out more &raquo;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="fas fa-flask"></i>
+            <span data-purecounter-start="0" data-purecounter-end="69" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Research Lab</strong> WITH ADVANCED RESEARCH FACILITIES</p>
+            <a href="#">Find out more &raquo;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="fas fa-award"></i>
+            <span data-purecounter-start="0" data-purecounter-end="250" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Awards</strong> GOT</p>
+            <a href="#">Find out more &raquo;</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section> -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>CAMPUS AMENITIES</h2>
+          <h4>Click on the boxes for getting 360 <sup>&deg;</sup> view </h4>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 d-flex align-items-stretch">
+            <div class="icon-box">
+              <!-- <div class="icon"><i class="fas fa-heartbeat"></i></div> -->
+              <h1><a href="">HEALTH CENTRE</a></h1>
+              <br>
+              <!-- <p>Regular Checkups available to ease you discomfort and provide you service 24x7.</p> -->
+              <!-- <a href="#">Click here to view &raquo;</a> -->
+            </div>
+          </div>
+
+          <div class="col-md-3 d-flex align-items-stretch">            
+            <div class="icon-box">
+              <!-- <div class="icon"><i class="fas fa-heartbeat"></i></div> -->
+              <h1><a href="">LIBRARY</a></h1>
+              <!-- <p>Regular Checkups available to ease you discomfort and provide you service 24x7.</p> -->
+              
+              <!-- <a href="#">Click here to view &raquo;</a> -->
+            </div>
+          </div>
+
+          <div class="col-md-3 d-flex align-items-stretch">            
+            <div class="icon-box">
+              <!-- <div class="icon"><i class="fas fa-heartbeat"></i></div> -->
+              <h1><a href="">CSED</a></h1>
+              <!-- <p>Regular Checkups available to ease you discomfort and provide you service 24x7.</p> -->
+            
+              <!-- <a href="#">Click here to view &raquo;</a> -->
+            </div>
+          </div>
+   
+         
+          
+          <div class="col-md-3 d-flex align-items-stretch">           
+             <div class="icon-box">
+              <!-- <div class="icon"><i class="fas fa-heartbeat"></i></div> -->
+              <h1><a href="">FACULTY LOUNGE</a></h1>
+              <!-- <p>Regular Checkups available to ease you discomfort and provide you service 24x7.</p> -->
+              <br>
+              <!-- <a href="#">Click here to view &raquo;</a> -->
+            </div>
+          </div>
+
+        <div><br></div>
+
+          <div class="col-md-3 d-flex align-items-stretch">           
+             <div class="icon-box">
+              <!-- <div class="icon"><i class="fas fa-heartbeat"></i></div> -->
+              <h1><a href="">HOSTEL "O"</a></h1>
+              <!-- <p>Regular Checkups available to ease you discomfort and provide you service 24x7.</p> -->
+              <br>
+              <!-- <a href="#">Click here to view &raquo;</a> -->
+            </div>
+          </div>
+
+          
+          <div class="col-md-3 d-flex align-items-stretch">            
+            <div class="icon-box">
+              <!-- <div class="icon"><i class="fas fa-heartbeat"></i></div> -->
+              <h1><a href="">HOSTEL "N"</a></h1>
+              <!-- <p>Regular Checkups available to ease you discomfort and provide you service 24x7.</p> -->
+              <br>
+              <!-- <a href="#">Click here to view &raquo;</a> -->
+            </div>
+          </div>
+        
+          
+          <div class="col-md-3 d-flex align-items-stretch">            
+            <div class="icon-box">
+              <!-- <div class="icon"><i class="fas fa-heartbeat"></i></div> -->
+              <h1><a href="">HOSTEL "M"</a></h1>
+              <!-- <p>Regular Checkups available to ease you discomfort and provide you service 24x7.</p> -->
+              <br>
+              <!-- <a href="#">Click here to view &raquo;</a> -->
+            </div>
+          </div>
+
+          <div class="col-md-3 d-flex align-items-stretch">            
+            <div class="icon-box">
+              <!-- <div class="icon"><i class="fas fa-heartbeat"></i></div> -->
+              <h1><a href="">POST OFFICE & <BR> BANKS</a></h1>
+              <!-- <p>Regular Checkups available to ease you discomfort and provide you service 24x7.</p> -->
+              <br><br><br>
+              <!-- <a href="#">Click here to view &raquo;</a> -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    
+
+    <!-- ======= (Creator) Doctors Section ======= -->
+    <section id="doctors" class="doctors">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Team</h2>
+          <p>This project is designed,developed and managed by the own team of our institution   </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/doctors/1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Prof. Maninder Singh</h4>
+                <span>Dean of Academic Affairs</span>
+                <p></p>
+                <div class="social">
+                  <a href=""><i class="ri-mail-fill"></i></a>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/doctors/2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Dr. Vinay Arora</h4>
+                <span>Associate Dean of Academic Affairs</span>
+                <p></p>
+                <div class="social">
+                  <a href=""><i class="ri-mail-fill"></i></a>
+             
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/doctors/3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Shubhankar Sharma</h4>
+                <span>Second Year Computer Science and Business Systems Student</span>
+                <p></p>
+                <div class="social">
+                  <a href=""><i class="ri-mail-fill"></i></a>
+               
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/doctors/4.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Lakshya Gupta</h4>
+                <span>Second Year Computer Science and Business Systems Student</span>
+                <p></p>
+                <div class="social">
+                  <a href=""><i class="ri-mail-fill"></i></a>
+                  <!-- <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Doctors Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+  
+
+    <div class="container">
+      <div class="copyright">
+        &copy;Copyright 2023. <strong><span>Thapar Institute of Engineering & Technology.</span></strong> All rights reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <div class="modal" tabindex="-1" id="loginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login/Signup</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput2" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="minimum 8 letter (case sensitive)">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="loginBtn">Login</button>
+        <button type="button" class="btn btn-primary" id="signupBtn">SignUp</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/glightbox/js/glightbox.min.js"></script>
+  <script src="static/php-email-form/validate.js"></script>
+  <script src="static/purecounter/purecounter.js"></script>
+  <script src="static/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/main.js"></script>
+
+</body>
+
+</html>
